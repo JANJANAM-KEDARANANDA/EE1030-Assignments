@@ -1,0 +1,90 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{PROBABILITY}
+\author{EE24BTECH11030 - J.KEDARANANDA}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+A  (Fill In The Blanks)\\\\
+\begin{enumerate}
+    \item[1.] For a biased die the probabilities for the different faces to turn up are given below:
+    \input{tables/table}\bigskip
+    This die is tossed and you are told that either face 1 or face 2 has turned up. Then the probability that it is face 1 is .............\hfill{(1981-2Marks)}\\
+    \item[2.] $P(A \cup B)=P(A \cap B)$ if and only if the relation between P(A) and P(B) is .............. 
+    
+    \hfill{(1985-2Marks)}\\
+    \item[3.] A box contains 100 tickets numbered 1,2,....,100. Two tickets are chosen at random. It is given that the maximum number on the two chosen tickets is not more than 10. The minimum number on them is 5 with probability ..............\hfill{(1985-2Marks)}\\
+    \item[4.] If $\frac{1+3p}{3}$ , $\frac{1-p}{4}$ and $\frac{1-2p}{2}$ are the probabilities of three mutually exclusive events,then the set of all values of p is ..............\hfill{(1986-Marks)}\\
+    \item[5.] Urn A contains 6 red and 4 black balls and urn B contains 4 red and 6 black balls. One ball is drawn at random from urn A and placed in urn B. Then one ball is drawn at random from urn B and placed in urn A. If now one ball is drawn at random from urn A,the probability that it is found to be red is .............\hfill{(1988-2Marks)}\\
+    \item[6.] A pair of fair dice is rolled together till a sum of either 5 or 7 is obtained. Then the probability that 5 comes before 7 is 
+    ............
+    \hfill{(1989-2Marks)}\\
+    \item[7.] Let A and B be 2 events such that P(A)=0.3 and $P(A \cup B)$=0.8. If A and B are independent events then P(B)=.............\hfill{(1990-2Marks)}\\
+    \item[8.] If the mean and the variance of a binomial X are 2 and 1 respectively, then the probability that X takes a value greater than one is equal to .............\hfill{(1991-2Marks)}\\ 
+    \item[9.] Three faces of a fair die are yellow, two faces red and one blue. The die is tossed three times. The probability that the colours, yellow, red and blue, appear in the first, second and the third tosses  respectively is ..............\hfill{(1992-2Marks)}\\
+    \item[10.] If two events A and B are such that $P(A^{c})=0.3$,P(B)=0.4 and $P(A \cap B^{c})=0.5$, then $P(B/A \cup B^{c})$=............ \hfill{(1994-2Marks)}
+\end{enumerate}
+B (True/False)\\\\
+\begin{enumerate}
+    \item[1.] If the letters of the word "Assassin" are written down at random in a row, the probability that no two S's occur together is 1/35
+    
+    \hfill{(1983-1Mark)}\\
+    \item[2.] If the probability for A to fail in an examination is 0.2 and that for B is 0.3, then the probability that either A or B fails is 0.5.\hfill{(1989-1Mark)}
+\end{enumerate}
+
+
+\end{document}
