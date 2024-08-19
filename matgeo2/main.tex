@@ -1,0 +1,98 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{1.1.5.26}
+\author{EE24BTECH11030 - J.KEDARANANDA
+}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\textbf{Question}:\\
+Let $\vec{P}$ and $\vec{Q}$ be the points of trisection of the line segment joining the points $\vec{A}\brak{2,-2}$ and $\vec{B}\brak{-7,4}$ such that $\vec{P}$ is nearer to $\vec{A}$. Find the coordinates of  $\vec{P}$  and $\vec{Q}$\\
+
+\hfill{\brak{10,2016}}\\
+\textbf{Solution: }
+\begin{table}[h!]    
+  \centering
+  \input{table.tex}
+  \caption{Variables Used}
+  \label{tab10.5.3.9.1}
+\end{table}
+\begin{align}
+\vec{P}=\frac{k(\vec{B})+(\vec{A})}{k+1}=\myvec{x_1\\y_1}\\ 
+   \vec{Q}=\frac{k(\vec{B})+(\vec{A})}{k+1}=\myvec{x_2\\y_2}
+\end{align}
+Here according to problem value of k is 0.5 for $\vec{P}$ and 2 for $\vec{Q}$\\
+\begin{align}
+P=\frac{1B+2A}{3}=\frac{1\myvec{-7\\4}+2\myvec{2\\-2}}{3}=\frac{\myvec{-3\\0}}{3}\\
+\end{align}
+\begin{align}
+P=\myvec{-1\\0}
+\end{align}
+\begin{align}
+Q=\frac{2B+1A}{3}=\frac{2\myvec{-7\\4}+1\myvec{2\\-2}}{3}=\frac{\myvec{-12\\6}}{3}\\
+\end{align}
+\begin{align}
+Q=\myvec{-4\\2}
+\end{align}
+Hence the coordinates of $\vec{P}$ are $\brak{-1,0}$ and of $\vec{Q}$ are $\brak{-4,2}$
+\begin{figure}[h!]
+   \centering
+   \includegraphics[width=0.7\linewidth]{figs/Fig2.png}
+   \caption{Stem Plot of y\brak{n}}
+   \label{stemplot}
+\end{figure}
+\end{document}  
+\end{document}
