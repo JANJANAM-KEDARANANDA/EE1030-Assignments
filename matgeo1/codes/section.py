@@ -17,30 +17,29 @@ from line.funcs import *
 from triangle.funcs import *
 from conics.funcs import circ_gen
 
+data = np.loadtxt("values.dat", skiprows=1)  
 
+xc = data[0]# Extract frequency data from values.dat
+yc = data[1]# Extract magnitude data from values.dat
 
 
 #Given points
 A = np.array(([0,0])).reshape(-1,1)
-D = np.array(([0,9])).reshape(-1,1)
+B = np.array(([0,9])).reshape(-1,1)
+C = np.array(([xc,yc])).reshape(-1,1)
 
-#Ratio
-n=2/1
 
-#Point
-P= (A+n*D)/(1+n) # calculating the coordinate points of R which divides the join between the two points
-#print(R)
 
 #Generating all lines
-x_AD = line_gen(A,D)
+x_AB = line_gen(A,B)
 
 #Plotting all lines
-plt.plot(x_AD[0,:],x_AD[1,:],label='$AD$')
+plt.plot(x_AB[0,:],x_AB[1,:],label='$AB$')
 
 #Labeling the coordinates
-tri_coords = np.block([[A,D,P]])
+tri_coords = np.block([[A,B,C]])
 plt.scatter(tri_coords[0,:], tri_coords[1,:])
-vert_labels = ['A','D','P']
+vert_labels = ['A','B','C']
 for i, txt in enumerate(vert_labels):
     #plt.annotate(txt, # this is the text
     plt.annotate(f'{txt}\n({tri_coords[0,i]:.0f}, {tri_coords[1,i]:.0f})',
