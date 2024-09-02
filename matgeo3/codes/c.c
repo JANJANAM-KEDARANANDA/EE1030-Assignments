@@ -12,15 +12,15 @@ int main() {
     double g, h;
     printf("enter the x coordinate of 1st point : ");
     scanf("%lf",&a);
-    printf("enter the x coordinate of 1st point : ");
+    printf("enter the y coordinate of 1st point : ");
     scanf("%lf",&b);
     printf("enter the x coordinate of 2nd point : ");
     scanf("%lf",&d);
-    printf("enter the x coordinate of 2nd point : ");
+    printf("enter the y coordinate of 2nd point : ");
     scanf("%lf",&e);
     printf("enter the x coordinate of 3rd point : ");
     scanf("%lf",&g);
-    printf("enter the x coordinate of 3rd point : ");
+    printf("enter the y coordinate of 3rd point : ");
     scanf("%lf",&h);
     double k = det(a, b,d, e, g, h);
     printf("The determinant of the matrix is : %.2f\n", k);
