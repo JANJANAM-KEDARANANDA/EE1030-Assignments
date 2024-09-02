@@ -4,17 +4,17 @@ import ctypes
 lib = ctypes.CDLL('./det.so')
 
 # Define the argument and return types of the C function
-lib.det.argtypes = [ctypes.c_double, ctypes.c_double, ctypes.c_double,
-                                ctypes.c_double, ctypes.c_double, ctypes.c_double,
-                                ctypes.c_double, ctypes.c_double, ctypes.c_double]
+lib.det.argtypes = [ctypes.c_double, ctypes.c_double,
+                                ctypes.c_double, ctypes.c_double,
+                                ctypes.c_double, ctypes.c_double]
 lib.det.restype = ctypes.c_double
 
 # Define a function to call the C function and get the determinant
-def get_determinant(a, b, c, d, e, f, g, h, i):
-    return lib.det(a, b, c, d, e, f, g, h, i)
+def get_determinant(a, b, d, e, g, h):
+    return lib.det(a, b,  d, e,  g, h)
 
 # Example usage
-det = get_determinant(2,0,0,1,2,0,0,4,0)
+det = get_determinant(2,0,1,2,0,4)
 print(f"The determinant of the matrix is: {det:.2f}")
 
 
