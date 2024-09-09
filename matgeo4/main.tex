@@ -1,0 +1,107 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{1.1.9.17}
+\author{EE24BTECH11030 - J.KEDARANANDA}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\textbf{Question}:\\
+Write the coordinates of the point $\vec{P}$ on the x-axis which is equidistant from the points $\vec{A}\myvec{-2,0}$ $\vec{B}\myvec{6,0}$.\hfill{\brak{10,2019}}\\
+\\ \textbf{Solution: }\\
+    \begin{table}[h!]    
+      \centering
+      \input{tables/table.tex}
+      \caption{}
+    \end{table}\\
+If \textbf{P} is equidistant from the points \textbf{A} and \textbf{B}
+    \begin{align}
+        \abs{\abs{\boldsymbol{P}-\boldsymbol{A}}} = \abs{\abs{\boldsymbol{P}-\boldsymbol{B}}} \label{eq1.1.8.28.1}
+    \end{align}
+     \begin{align}
+        \abs{\abs{\boldsymbol{P}-\boldsymbol{A}}}^2 = \abs{\abs{\boldsymbol{P}-\boldsymbol{B}}}^2\label{eq1.1.8.28.2}
+    \end{align}
+    \begin{align}
+    	\abs{\abs{\boldsymbol{P}}}^2 - 2\boldsymbol{P}^\top \boldsymbol{A} + \abs{\abs{\boldsymbol{A}}}^2 = \abs{\abs{\boldsymbol{P}}}^2 - 2\boldsymbol{P}^\top\boldsymbol{B} + \abs{\abs{\boldsymbol{B}}}^2\label{eq1.1.8.28.3}
+    \end{align}
+By simplifying further,
+    \begin{align}
+    	\brak{\boldsymbol{A}-\boldsymbol{B}}^\top \vec{P} = \frac{\abs{\abs{\boldsymbol{A}}}^2-\abs{\abs{\boldsymbol{B}}}^2}{2} \\
+    	\myvec{-8 \\ 0}^\top \vec{P} = \frac{\abs{\abs{\myvec{-2 \\ 0}}}^2-\abs{\abs{\myvec{6 \\ 0}}}^2}{2} = -16\label{eq1.1.8.28.4}
+    \end{align}
+Comparing with $n^\top x = c$
+    \begin{align}
+    	\boldsymbol{n} = \myvec{-8 \\ 0}\\ \label{eq1.1.8.28.5}
+	    \boldsymbol{c} = -16\\
+     -8x+0y=-16\\
+     x=2,y=0\\
+     \vec{P}=\myvec{2 \\ 0}
+    \end{align}
+    \begin{figure}[h]
+        \centering
+       \includegraphics[width=0.7\linewidth]{figs/fig1.png}
+       \caption{}
+       \label{graph}
+    \end{figure}
+
+
+
+\end{document}  
+
+
+
+
+
+
+
