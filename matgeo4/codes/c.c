@@ -10,20 +10,23 @@
 #include "libs/geofun.h"
 
 int main() {
-	double **k,**M,**C;
-	int x1=-2,x2=6,y1=0,y2=0;
-	M = createMat(2,2);
-	k = createMat(2,1);
-	C = createMat(2,1);
-	M[0][1] = x1;
-	M[1][1] = y1;
-	M[0][0] = x2;
-	M[1][0] = y2;
+	double **A,**B,**P,**M,**k;
+	A = createMat(3,1);
+	B = createMat(3,1);
+	int x1=-2,x2=6,y1=0,y2=0,z1=0,z2=0;
+	M = createMat(3,2);
+	k = createMat(3,1);
+	P = createMat(3,1);
+	M[0][0] = x1;
+	M[1][0] = y1;
+	M[2][0] = z1;
+	M[0][1] = x2;
+	M[1][1] = y2;
+	M[2][1] = z2;
 	k[0][0] = (float)1/2;
 	k[1][0] = (float)1/2;
-	C = Matmul(M,k,2,2,1);
-	//printf("X coordinate of C: %.02f\n", C[0][1]);
-	//printf("Y coordinate of C: %.02f\n", C[1][1]);
+	k[2][0] = (float)1/2;
+	P = Matmul(M,k,3,2,1);
 	FILE *file;
 	file = fopen("values.dat", "w");
 
@@ -31,15 +34,16 @@ int main() {
 		printf("Error opening file!\n");
 		return 1;
 	}
-	fprintf(file, "x\ty\t of P\n");
-	fprintf(file, "%.02lf\t", C[0][0]);
-	fprintf(file, "%.02lf", C[1][0]);
+	fprintf(file, "x\ty\tz\t of P\n");
+	fprintf(file, "%.02lf\t", P[0][0]);
+	fprintf(file, "%.02lf\t", P[1][0]);
+	fprintf(file, "%.02lf\t", P[2][0]);
 
 	fclose(file);
 	printf("Results have been written to values.dat\n");
 
 	freeMat(M,2);
 	freeMat(k,2);
-	freeMat(C,2);
+	freeMat(P,2);
 	return 0;
 }

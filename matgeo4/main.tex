@@ -59,38 +59,38 @@
 
 \textbf{Question}:\\
 Write the coordinates of the point $\vec{P}$ on the x-axis which is equidistant from the points $\vec{A}\myvec{-2,0}$ $\vec{B}\myvec{6,0}$.\hfill{\brak{10,2019}}\\
-\\ \textbf{Solution: }\\
+\\ \solution \\
     \begin{table}[h!]    
       \centering
-      \input{tables/table.tex}
+      \input{table.tex}
       \caption{}
     \end{table}\\
-If \textbf{P} is equidistant from the points \textbf{A} and \textbf{B}
+If $\vec{P}$ is equidistant from the points $\vec{A}$ and $\vec{B}$
     \begin{align}
-        \abs{\abs{\boldsymbol{P}-\boldsymbol{A}}} = \abs{\abs{\boldsymbol{P}-\boldsymbol{B}}} \label{eq1.1.8.28.1}
+        \abs{\abs{\vec{P}-\vec{A}}} = \abs{\abs{\vec{P}-\vec{B}}} \label{eq1.1.9.17.1}
     \end{align}
      \begin{align}
-        \abs{\abs{\boldsymbol{P}-\boldsymbol{A}}}^2 = \abs{\abs{\boldsymbol{P}-\boldsymbol{B}}}^2\label{eq1.1.8.28.2}
+        \abs{\abs{\vec{P}-\vec{A}}}^2 = \abs{\abs{\vec{P}-\vec{B}}}^2\label{eq1.1.9.17.2}
     \end{align}
     \begin{align}
-    	\abs{\abs{\boldsymbol{P}}}^2 - 2\boldsymbol{P}^\top \boldsymbol{A} + \abs{\abs{\boldsymbol{A}}}^2 = \abs{\abs{\boldsymbol{P}}}^2 - 2\boldsymbol{P}^\top\boldsymbol{B} + \abs{\abs{\boldsymbol{B}}}^2\label{eq1.1.8.28.3}
+    	\abs{\abs{\vec{P}}}^2 - 2\vec{P}^\top \vec{A} + \abs{\abs{\vec{A}}}^2 = \abs{\abs{\vec{P}}}^2 - 2\vec{P}^\top\vec{B} + \abs{\abs{\vec{B}}}^2\label{eq1.1.9.17.3}
     \end{align}
 By simplifying further,
     \begin{align}
-    	\brak{\boldsymbol{A}-\boldsymbol{B}}^\top \vec{P} = \frac{\abs{\abs{\boldsymbol{A}}}^2-\abs{\abs{\boldsymbol{B}}}^2}{2} \\
-    	\myvec{-8 \\ 0}^\top \vec{P} = \frac{\abs{\abs{\myvec{-2 \\ 0}}}^2-\abs{\abs{\myvec{6 \\ 0}}}^2}{2} = -16\label{eq1.1.8.28.4}
+    	\brak{\vec{A}-\vec{B}}^\top \vec{P} = \frac{\abs{\abs{\vec{A}}}^2-\abs{\abs{\vec{B}}}^2}{2} \\
+    	\myvec{-8 \\ 0}^\top \vec{P} = \frac{\abs{\abs{\myvec{-2 \\ 0}}}^2-\abs{\abs{\myvec{6 \\ 0}}}^2}{2} = -16\label{eq1.1.9.17.4}
     \end{align}
 Comparing with $n^\top x = c$
     \begin{align}
-    	\boldsymbol{n} = \myvec{-8 \\ 0}\\ \label{eq1.1.8.28.5}
-	    \boldsymbol{c} = -16\\
+    	\vec{n} = \myvec{-8 \\ 0}\\ \label{eq1.1.8.28.5}
+	    \vec{c} = -16\\
      -8x+0y=-16\\
      x=2,y=0\\
      \vec{P}=\myvec{2 \\ 0}
     \end{align}
     \begin{figure}[h]
         \centering
-       \includegraphics[width=0.7\linewidth]{figs/fig1.png}
+       \includegraphics[width=\linewidth]{figs/fig1.png}
        \caption{}
        \label{graph}
     \end{figure}
