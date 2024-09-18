@@ -4,22 +4,11 @@
 #released under GNU GPL
 #Point Vectors
 
-
 import sys                                          #for path to external scripts
 sys.path.insert(0, '/home/kedar/Documents/matgeo/codes/CoordGeo')        #path to my scripts
 import numpy as np
 import numpy.linalg as LA
-import ctypes
-from ctypes import Structure, c_double
 import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
-from mpl_toolkits.mplot3d import Axes3D
-
-#local imports
-from line.funcs import *
-from triangle.funcs import *
-from conics.funcs import circ_gen
-
 
 # Read values from values.dat
 def read_values(filename):
@@ -33,9 +22,7 @@ def read_values(filename):
 # Call the function to read values
 AB, BC, angle_B = read_values('values.dat')
 
-
 # Triangle vertices computation
-# Convert angleB from degrees to radians
 angle_B_rad = np.radians(angle_B)
 
 # Assume point B is at origin (0, 0)
@@ -47,24 +34,10 @@ C = np.array([BC, 0])
 # Calculate coordinates of A using trigonometry
 A = np.array([AB * np.cos(angle_B_rad), AB * np.sin(angle_B_rad)])
 
-# Triangle sides
-a = LA.norm(B - C)
-b = LA.norm(C - A)
-c = LA.norm(A - B)
-
-
-# Direction Vectors
-def dir_vec(P1, P2):
-    return P2 - P1
-
-m1 = dir_vec(A, B)
-m2 = dir_vec(B, C)
-m3 = dir_vec(C, A)
-
-# Angles
-angA = np.degrees(np.arccos((-m1.T @ m3) / (b * c)))
-angB = np.degrees(np.arccos((-m1.T @ m2) / (a * c)))
-angC = np.degrees(np.arccos((-m2.T @ m3) / (a * b)))
+# Calculate lengths of the sides
+a = LA.norm(B - C)  # Length BC
+b = LA.norm(C - A)  # Length CA
+c = LA.norm(A - B)  # Length AB
 
 # Plotting
 plt.figure()
@@ -85,10 +58,19 @@ plt.text(A[0], A[1], 'A', fontsize=12, ha='right')
 plt.text(B[0], B[1], 'B', fontsize=12, ha='right')
 plt.text(C[0], C[1], 'C', fontsize=12, ha='right')
 
+# Calculate AC length
+AC = LA.norm(A - C)
+
+# Update legend to show calculated side lengths
+plt.legend([
+    f'Side AB = {c:.2f} cm',  # Length AB
+    f'Side BC = {a:.2f} cm',  # Length BC
+    f'Side AC = {b:.2f} cm'   # Length AC
+], loc='upper right')
+
 # Labels and grid
 plt.xlabel('$x$')
 plt.ylabel('$y$')
-plt.legend(loc='best')
 plt.grid(True)
 plt.axis('equal')
 
