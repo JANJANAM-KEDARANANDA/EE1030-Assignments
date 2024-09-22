@@ -18,7 +18,7 @@ int main() {
     printf("Enter one of the angles A of the rhombus in degrees: ");
     scanf("%lf", &A); // Use & to store the input value in the variable
 
-    FILE *file = fopen("values.dat", "w");
+    FILE *file = fopen("values.txt", "w"); // Change to .txt file
 
     // Check if the file was opened successfully
     if (file == NULL) {
@@ -33,7 +33,7 @@ int main() {
     // Close the file
     fclose(file);
 
-    printf("Values have been written to values.dat\n");
+    printf("Values have been written to values.txt\n"); // Update message
 
     return 0;
 }

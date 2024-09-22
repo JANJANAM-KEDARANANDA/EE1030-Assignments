@@ -10,7 +10,7 @@ import numpy as np
 import numpy.linalg as LA
 import matplotlib.pyplot as plt
 
-# Function to read values from values.dat
+# Function to read values from values.txt
 def read_values(filename):
     with open(filename, 'r') as file:
         lines = file.readlines()
@@ -18,8 +18,8 @@ def read_values(filename):
         angle_A = float(lines[1].split(':')[1].strip().replace('degrees', ''))
     return side_length, angle_A
 
-# Read side length and angle from the dat file
-side_length, angle_A = read_values('values.dat')
+# Read side length and angle from the txt file
+side_length, angle_A = read_values('values.txt')  # Updated to read from values.txt
 
 # Calculate the coordinates of the vertices of the rhombus
 angle_A_rad = np.radians(angle_A)
@@ -56,12 +56,11 @@ plt.text(D[0], D[1], 'D', fontsize=12, ha='right')
 
 # Set the legend to show side lengths
 plt.legend([
-    f'Side AB = {3.4:.2f} cm',  
-    f'Side BC = {3.4:.2f} cm',  
-    f'Side CD = {3.4:.2f} cm',
-    f'Side DA = {3.4:.2f} cm'
+    f'Side AB = {side_length:.2f} cm',  
+    f'Side BC = {side_length:.2f} cm',  
+    f'Side CD = {side_length:.2f} cm',
+    f'Side DA = {side_length:.2f} cm'
 ], loc='upper right')
-
 
 # Labels and grid
 plt.xlabel('$x$')
