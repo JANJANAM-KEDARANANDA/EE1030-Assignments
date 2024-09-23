@@ -1,2 +1,0 @@
-side: 3.40 cm
-Angle_1: 45.00 degrees

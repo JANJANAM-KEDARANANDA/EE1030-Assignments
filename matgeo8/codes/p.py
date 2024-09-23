@@ -10,16 +10,18 @@ import numpy as np
 import numpy.linalg as LA
 import matplotlib.pyplot as plt
 
-# Function to read values from values.txt
+# Function to read values from values.tex using loadtxt
 def read_values(filename):
-    with open(filename, 'r') as file:
-        lines = file.readlines()
-        side_length = float(lines[0].split(':')[1].strip().replace('cm', ''))
-        angle_A = float(lines[1].split(':')[1].strip().replace('degrees', ''))
+    # Load the data, ensuring to treat it as strings
+    data = np.loadtxt(filename, delimiter=':', dtype=str, comments='%')
+    
+    # Extract and clean the values
+    side_length = float(data[0][1].strip().replace('cm', ''))
+    angle_A = float(data[1][1].strip().replace('degrees', ''))
     return side_length, angle_A
 
-# Read side length and angle from the txt file
-side_length, angle_A = read_values('values.txt')  # Updated to read from values.txt
+# Read side length and angle from the LaTeX file
+side_length, angle_A = read_values('values.tex')
 
 # Calculate the coordinates of the vertices of the rhombus
 angle_A_rad = np.radians(angle_A)
