@@ -26,9 +26,10 @@ int main() {
         return 1;
     }
 
-    fprintf(file, "d n\n");
-    fprintf(file, "%.2f %.2f\n", d[0][0], n[0][0]);
-    fprintf(file, "%.2f %.2f\n", d[1][0], n[1][0]);
+    fprintf(file, "d: %.2f\n", d[0][0]);
+    fprintf(file, "d: %.2f\n", d[1][0]);
+    fprintf(file, "n: %.2f\n", n[0][0]);
+    fprintf(file, "n: %.2f\n", n[1][0]);
     fclose(file);
 
     freeMat(d, 2);

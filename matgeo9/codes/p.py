@@ -1,22 +1,26 @@
+# Code by GVV Sharma
+# September 12, 2023
+# Revised July 21, 2024
+# Released under GNU GPL
+# Point Vectors
 import sys                                          # for path to external scripts
 sys.path.insert(0, '/home/kedar/Documents/matgeo/codes/CoordGeo')  # path to my scripts
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
-# Custom function to mimic "load.tex" behavior
-def load_tex(filename):
-    try:
-        data = np.genfromtxt(filename, delimiter=' ', names=True)
-        return data
-    except Exception as e:
-        print(f"Error loading {filename}: {e}")
-        return None
+# Read values from values.tex using np.loadtxt
+data = np.loadtxt('values.tex', delimiter=':', dtype=str, comments='%')
 
-# Load data from the 'values.tex' file using the custom "load.tex" command
-data = load_tex('values.tex')
-if data is None:
-    sys.exit("Failed to load data from values.tex")
+# Extract and clean the values for direction and normal vectors
+direction_vector = np.array([
+    float(data[0][1].strip().replace('cm', '')),  # Adjust based on your data structure
+    float(data[1][1].strip().replace('cm', ''))
+])
+
+normal_vector = np.array([
+    float(data[2][1].strip().replace('cm', '')),  # Adjust based on your data structure
+    float(data[3][1].strip().replace('cm', ''))
+])
 
 # Define points for the line
 x_values = np.linspace(-5, 10, 100)
@@ -28,12 +32,8 @@ plt.figure(figsize=(8, 6))
 # Plot the line
 plt.plot(x_values, y_values, label='Line: $y = x - 2$', color='cyan')
 
-# Extract direction vector and normal vector
-x = data['d']
-y = data['n']
-direction_vector = np.array([x[0], x[1]])  
-normal_vector = np.array([y[0], y[1]])
-origin = np.array([2, 0])  
+# Origin point
+origin = np.array([2, 0])
 
 # Plot the direction vector
 plt.quiver(*origin, *direction_vector, angles='xy', scale_units='xy', scale=1, color='green', label='Direction Vector')
