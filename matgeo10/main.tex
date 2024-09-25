@@ -1,12 +1,12 @@
-\let\negmedspace\undefined
+\let\negmpace\undefined
 \let\negthickspace\undefined
 \documentclass[journal]{IEEEtran}
 \usepackage[a5paper, margin=10mm, onecolumn]{geometry}
 %\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
 \usepackage{tfrupee} % Include tfrupee package
-
 \setlength{\headheight}{1cm} % Set the height of the header box
 \setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{xparse}
 \usepackage{gvv-book}
 \usepackage{gvv}
 \usepackage{cite}
@@ -35,68 +35,46 @@
 \usepackage{hhline}                                           
 \usepackage{ifthen}                                           
 \usepackage{lscape}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
 \begin{document}
-
 \bibliographystyle{IEEEtran}
-\vspace{3cm}
-
-\title{4-4.2-18}
+\title{4-4.2-6}
 \author{EE24BTECH11030 - J.KEDARANANDA}
 % \maketitle
 % \newpage
 % \bigskip
 {\let\newpage\relax\maketitle}
-
-\renewcommand{\thefigure}{\theenumi}
-\renewcommand{\thetable}{\theenumi}
-\setlength{\intextsep}{10pt} % Space between text and floats
-
-
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\renewcommand{\thetable}{\theenumi}
-
-
 \textbf{Question}:\\
-Find the direction and normal vectors of each of the following lines $y=x-2$ .
-\\ \solution \\
-    \begin{table}[h!]    
-      \centering
-      \input{tables/table.tex}
-      \caption{}
-    \end{table}\\
+Find the direction and normal vectors of the following line:\\
+3x + 2 = 0
+\\
+\solution \\
+\begin{table}[h!]
+  \centering
+  \input{tables/table.tex}
+  \caption{}
+  \label{tabQuestion-4-4.2-6}
+\end{table}\\
+For the line of form Ax+By+C=0 the normal vector is given by
 \begin{align}
-    y &= mx + c \\
-    x &= 0 \Rightarrow y = c \\
-    x &= 1 \Rightarrow y = mx + c \\
-    x &= h + m  
+    n&=\myvec{A\\B}\\
+    A=3,B=0\\
+    \implies n&=\myvec{3\\0}
 \end{align}
+Let the direction vector be d=$\myvec{a\\b}$
 \begin{align}
-    m^\top n = 0\\
-    n^\top x = n^\top h + \kappa n^\top m \\
-    \Rightarrow n (x - h) = 0 \\
-    n^\top x = c \\
-    c = n^\top h 
+    d^T.n&=0\\
+    3a&=0\\
+    \implies d&=\myvec{0\\-3}
 \end{align}
-\begin{align}
-    \text{where} \quad n =\begin{pmatrix}-m \\1\end{pmatrix}
-\end{align}
-For the line \( y = x - 2 \):
-\begin{align}
-m &= 1
-\end{align}
-\begin{align}
-\text{Direction vector } m = \begin{pmatrix} 1 \\ m \end{pmatrix} = \begin{pmatrix} 1 \\ 1 \end{pmatrix} 
-\end{align}
-The normal vector is defined by:
-\begin{align}
-n = \begin{pmatrix} -m \\ 1 \end{pmatrix} = \begin{pmatrix} -1 \\ 1 \end{pmatrix}
-\end{align}
-    \begin{figure}[h]
-       \centering
-       \includegraphics[width=\linewidth]{figs/fig1.png}
-       \caption{}
-       \label{graph}
-    \end{figure}
-\end{document}  
-
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\linewidth]{figs/fig1.png}
+    \caption{ Line $Line 3x + 2 = 0$}
+\end{figure}
+\end{document}
