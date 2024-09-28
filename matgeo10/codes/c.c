@@ -14,10 +14,10 @@ int main() {
     double **d, **n;
     n = createMat(2, 1);
     d = createMat(2, 1);
-    n[0][0] = A;
-    n[1][0] = B;
-    d[0][0] = B;
-    d[1][0] = -A;
+    n[0][0] = A/3;
+    n[1][0] = B/3;
+    d[0][0] = B/3;
+    d[1][0] = -A/3;
 
     FILE *file;
     file = fopen("values.tex", "w");  // Updated file name
