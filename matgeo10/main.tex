@@ -35,6 +35,7 @@
 \usepackage{hhline}                                           
 \usepackage{ifthen}                                           
 \usepackage{lscape}
+\usepackage{float}
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 \setlength{\intextsep}{10pt} % Space between text and floats
@@ -54,18 +55,18 @@ Find the direction and normal vectors of the following line:\\
 3x + 2 = 0
 \\
 \solution \\
-\begin{table}[h!]
+\begin{table}[!ht]
   \centering
   \input{tables/table1.tex}
   \caption{}
-  \label{tabQuestion-4-4.2-6}
+  \label{tabQuestion-4-4.2-6-1}
 \end{table}\\
 For the line of form Ax+By+C=0 
-\begin{table}[h!]
+\begin{table}[!ht]
   \centering
   \input{tables/table2.tex}
   \caption{}
-  \label{tabQuestion-4-4.2-6}
+  \label{tabQuestion-4-4.2-6-2}
 \end{table}\\
 \begin{align}
     A&=3\\
@@ -77,7 +78,7 @@ For the line of form Ax+By+C=0
     3a&=0\\
     \implies d&=\myvec{0\\-3} = \myvec{0\\-1}
 \end{align}
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
     \includegraphics[width=\linewidth]{figs/fig1.png}
     \caption{}
