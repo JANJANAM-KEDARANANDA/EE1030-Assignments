@@ -65,7 +65,6 @@ plt.fill_between(np.linspace(x_min, x_max, 100), y_fill_upper, y_fill_lower, col
 # Labels and plot settings
 plt.xlabel('$x$')
 plt.ylabel('$y$')
-plt.title('Area Enclosed by the Ellipse and the Ordinates')
 plt.grid(True)
 plt.legend(loc='upper right')
 
