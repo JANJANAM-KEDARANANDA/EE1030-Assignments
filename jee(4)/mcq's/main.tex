@@ -1,0 +1,111 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{jee-main-maths-27-08-2021-shift-1}
+\author{EE24BTECH11030 - J.KEDARANANDA}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+    \item If $\alpha$, $\beta$ are the distinct roots of $x^2+ bx + c = 0$ , then $\lim_{x \to \beta}\frac{e^{2(x^2 + bx + c)} - 1 - 2(x^2 + bx + c)}{{(x - \beta)}^2}$ is equal to:  \\ 
+    \begin{multicols}{4}
+    \begin{enumerate}
+        \item $b^2 + 4c$
+        \item $2(b^2 + 4c)$
+        \item $2(b^2 - 4c)$
+        \item $b^2 - 4c$
+    \end{enumerate}
+    \end{multicols}
+    \item When a certain biased die is rolled, a particular face occurs with probability $\frac{1}{6} - x$ and its opposite face occurs with probability $\frac{1}{6} + x$. All other faces occur with probability $\frac{1}{6}$ Note that opposite faces sum to 7 in any die. If 0 $<$ x $<$ $\frac{1}{6}$ and the probability of obtaining total sum = 7, when such a die is rolled twice, is $\frac{13}{96}$, then the value of x is:  \\
+    \begin{multicols}{4}
+    \begin{enumerate}
+        \item $\frac{1}{16}$
+        \item $\frac{1}{8}$
+        \item $\frac{1}{9}$
+        \item $\frac{1}{12}$
+    \end{enumerate} 
+    \end{multicols}
+    \item If $x^2+ 9y^2 - 4x + 3 = 0$, x, y $\in$ R , then x and y respectively lie in the intervals:  \\
+    \begin{multicols}{2}
+    \begin{enumerate}
+        \item $\left[\frac{-1}{3},\frac{1}{3}\right]$ and $\left[\frac{-1}{3},\frac{1}{3}\right]$\\
+        \item $\left[\frac{-1}{3},\frac{1}{3}\right]$ and $\left[1,3\right]$
+        \item $\left[1,3\right]$ and $\left[1,3\right]$\\
+        \item $\left[1,3\right]$ and $\left[\frac{-1}{3},\frac{1}{3}\right]$
+    \end{enumerate}
+    \end{multicols}
+    \item $\int_{6}^{16} \frac{\ln x^2}{\ln{x^2} + \ln{(x^2 - 44x + 484)}} \, dx$ is equal to: \\
+    \begin{multicols}{4}
+    \begin{enumerate}
+        \item 6
+        \item 8
+        \item 5
+        \item 10
+    \end{enumerate} 
+    \end{multicols}
+    \item A wire of length 20 m is to be cut into two pieces.One of the pieces is to be made into a square and the other into a regular hexagon. Then the length of the side (in meters) of the hexagon, so that the combined area of the square and the hexagon is minimum, is:  \\
+    \begin{multicols}{4}
+    \begin{enumerate}
+        \item $\frac{5}{2 + \sqrt{3}}$
+        \item $\frac{10}{2 + 3\sqrt{3}}$
+        \item $\frac{5}{3 + \sqrt{3}}$
+        \item $\frac{10}{3 + 2\sqrt{3}}$
+    \end{enumerate} 
+    \end{multicols}
+\end{enumerate}
+\end{document}
