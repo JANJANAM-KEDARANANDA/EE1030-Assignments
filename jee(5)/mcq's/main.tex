@@ -1,0 +1,117 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{jee-main-maths-25-06-2022-shift-2}
+\author{EE24BTECH11030 - J.KEDARANANDA}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+    \item A biased die is marked with numbers 2, 4, 8, 16, 32, 32 on its faces and the probability of getting a face with mark n is $\frac{1}{n}$. If the die is thrown thrice, then the probability, that the sum of the numbers obtained is 48, is :  \\ 
+    \begin{multicols}{4}
+    \begin{enumerate}
+        \item $\frac{7}{2^{11}}$
+        \item $\frac{7}{2^{12}}$
+        \item $\frac{3}{2^{10}}$
+        \item $\frac{13}{2^{12}}$
+    \end{enumerate}
+    \end{multicols}
+    \bigskip
+    \item The negation of the Boolean expression $((\sim q) \land p) \implies ((\sim p) \lor q)$ is logically equivalent to :  \\
+    \begin{multicols}{4}
+    \begin{enumerate}
+        \item $p \implies q$
+        \item $q \implies p$
+        \item $\sim (p \implies q)$
+        \item $\sim (q \implies p)$
+    \end{enumerate} 
+    \end{multicols}
+    \bigskip
+    \item If the line $y = 4 + kx$, k $>$ 0, is the tangent to the parabola $y = x - x^2$ at the point $\vec{P}$ and $\vec{V}$ is the vertex of the parabola, then the slope of the line through $\vec{P}$ and $\vec{V}$ is :  \\
+    \begin{multicols}{4}
+    \begin{enumerate}
+        \item $\frac{3}{2}$
+        \item $\frac{26}{9}$
+        \item $\frac{5}{2}$
+        \item $\frac{23}{6}$
+    \end{enumerate}
+    \end{multicols}
+    \bigskip
+    \item The value of $tan^{-1}{\left(\frac{\cos{\frac{15\pi}{4}} - 1}{\sin{\frac{\pi}{4}}}\right)}$ is equal to: \\
+    \begin{multicols}{4}
+    \begin{enumerate}
+        \item $\frac{-\pi}{4}$
+        \item $\frac{-\pi}{8}$
+        \item $\frac{-5\pi}{12}$
+        \item $\frac{-4\pi}{9}$
+    \end{enumerate} 
+    \end{multicols}
+    \bigskip
+    \item  The line $y = x + 1$ meets the ellipse $\frac{x^2}{4} + \frac{y^2}{2} = 1$ at two points $\vec{P}$ and $\vec{Q}$. If r is the radius of the circle with PQ as diameter then $(3r)^2$ is equal to : \\
+    \begin{multicols}{4}
+    \begin{enumerate}
+        \item 20
+        \item 12
+        \item 11
+        \item 8
+    \end{enumerate} 
+    \end{multicols}
+    \bigskip
+\end{enumerate}
+\end{document}
+
