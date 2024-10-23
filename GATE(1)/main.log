@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.30)  23 OCT 2024 22:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.30)  23 OCT 2024 22:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1933,8 +1933,8 @@ File: figs/13.png Graphic file (type png)
 <use figs/13.png>
 Package pdftex.def Info: figs/13.png  used on input line 219.
 (pdftex.def)             Requested size: 364.1953pt x 109.57475pt.
- [5 <./figs/11.png>]
-<figs/15.png, id=139, 611.28375pt x 628.3475pt>
+ [5 <./figs/11.png>] [6 <./figs/13.png>]
+<figs/15.png, id=155, 611.28375pt x 628.3475pt>
 File: figs/15.png Graphic file (type png)
 <use figs/15.png>
 Package pdftex.def Info: figs/15.png  used on input line 248.
@@ -1944,14 +1944,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 245--253
 
  []
 
-[6 <./figs/13.png>] [7 <./figs/15.png>] (./main.aux)
+[7 <./figs/15.png>] [8] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 49918 strings out of 478287
- 1165668 string characters out of 5849289
- 1642028 words of memory out of 5000000
+ 49919 strings out of 478287
+ 1165674 string characters out of 5849289
+ 1637028 words of memory out of 5000000
  67191 multiletter control sequences out of 15000+600000
  537403 words of font info for 166 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1963,10 +1963,10 @@ t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
 onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (7 pages, 672208 bytes).
+Output written on main.pdf (8 pages, 672437 bytes).
 PDF statistics:
- 233 PDF objects out of 1000 (max. 8388607)
- 176 compressed objects within 2 object streams
- 101 named destinations out of 1000 (max. 500000)
+ 237 PDF objects out of 1000 (max. 8388607)
+ 179 compressed objects within 2 object streams
+ 102 named destinations out of 1000 (max. 500000)
  149 words of extra memory for PDF output out of 10000 (max. 10000000)
 
