@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.30)  23 OCT 2024 22:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.30)  23 OCT 2024 23:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1892,55 +1892,55 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 7
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-<figs/2.png, id=31, 703.62875pt x 174.6525pt>
+<figs/2.png, id=32, 703.62875pt x 174.6525pt>
 File: figs/2.png Graphic file (type png)
 <use figs/2.png>
 Package pdftex.def Info: figs/2.png  used on input line 76.
 (pdftex.def)             Requested size: 364.1953pt x 90.39874pt.
-<figs/4.png, id=33, 320.19624pt x 302.12875pt>
+<figs/4.png, id=35, 320.19624pt x 302.12875pt>
 File: figs/4.png Graphic file (type png)
 <use figs/4.png>
-Package pdftex.def Info: figs/4.png  used on input line 98.
+Package pdftex.def Info: figs/4.png  used on input line 99.
 (pdftex.def)             Requested size: 364.1953pt x 343.65123pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  <./figs/2.png>]
-<figs/5.png, id=61, 489.83pt x 218.8175pt>
+<figs/5.png, id=65, 489.83pt x 218.8175pt>
 File: figs/5.png Graphic file (type png)
 <use figs/5.png>
-Package pdftex.def Info: figs/5.png  used on input line 113.
+Package pdftex.def Info: figs/5.png  used on input line 115.
 (pdftex.def)             Requested size: 364.1953pt x 162.69702pt.
  [2 <./figs/4.png>]
-<figs/7.png, id=77, 497.86pt x 285.065pt>
+<figs/7.png, id=82, 497.86pt x 285.065pt>
 File: figs/7.png Graphic file (type png)
 <use figs/7.png>
-Package pdftex.def Info: figs/7.png  used on input line 136.
+Package pdftex.def Info: figs/7.png  used on input line 139.
 (pdftex.def)             Requested size: 199.16928pt x 114.04137pt.
  [3 <./figs/5.png> <./figs/7.png>]
-<figs/9.png, id=97, 421.575pt x 117.43875pt>
+<figs/9.png, id=102, 421.575pt x 117.43875pt>
 File: figs/9.png Graphic file (type png)
 <use figs/9.png>
-Package pdftex.def Info: figs/9.png  used on input line 159.
+Package pdftex.def Info: figs/9.png  used on input line 163.
 (pdftex.def)             Requested size: 364.1953pt x 101.45587pt.
-<figs/11.png, id=98, 662.475pt x 389.455pt>
+<figs/11.png, id=104, 662.475pt x 389.455pt>
 File: figs/11.png Graphic file (type png)
 <use figs/11.png>
-Package pdftex.def Info: figs/11.png  used on input line 184.
+Package pdftex.def Info: figs/11.png  used on input line 189.
 (pdftex.def)             Requested size: 364.1953pt x 214.09988pt.
  [4 <./figs/9.png>]
-<figs/13.png, id=121, 700.6175pt x 210.7875pt>
+<figs/13.png, id=129, 700.6175pt x 210.7875pt>
 File: figs/13.png Graphic file (type png)
 <use figs/13.png>
-Package pdftex.def Info: figs/13.png  used on input line 219.
+Package pdftex.def Info: figs/13.png  used on input line 225.
 (pdftex.def)             Requested size: 364.1953pt x 109.57475pt.
  [5 <./figs/11.png>] [6 <./figs/13.png>]
-<figs/15.png, id=155, 611.28375pt x 628.3475pt>
+<figs/15.png, id=163, 611.28375pt x 628.3475pt>
 File: figs/15.png Graphic file (type png)
 <use figs/15.png>
-Package pdftex.def Info: figs/15.png  used on input line 248.
+Package pdftex.def Info: figs/15.png  used on input line 255.
 (pdftex.def)             Requested size: 364.1953pt x 374.35559pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--253
+Underfull \hbox (badness 10000) in paragraph at lines 252--261
 
  []
 
@@ -1949,13 +1949,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 49919 strings out of 478287
- 1165674 string characters out of 5849289
- 1637028 words of memory out of 5000000
- 67191 multiletter control sequences out of 15000+600000
+ 49927 strings out of 478287
+ 1165733 string characters out of 5849289
+ 1637279 words of memory out of 5000000
+ 67199 multiletter control sequences out of 15000+600000
  537403 words of font info for 166 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 106i,12n,107p,695b,914s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 106i,12n,107p,710b,914s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
@@ -1963,10 +1963,10 @@ t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
 onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (8 pages, 672437 bytes).
+Output written on main.pdf (8 pages, 672912 bytes).
 PDF statistics:
- 237 PDF objects out of 1000 (max. 8388607)
- 179 compressed objects within 2 object streams
+ 245 PDF objects out of 1000 (max. 8388607)
+ 187 compressed objects within 2 object streams
  102 named destinations out of 1000 (max. 500000)
  149 words of extra memory for PDF output out of 10000 (max. 10000000)
 
