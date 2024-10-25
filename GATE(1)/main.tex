@@ -36,6 +36,7 @@
 \usepackage{hhline}                                           
 \usepackage{ifthen}                                           
 \usepackage{lscape}
+\usepackage{circuitikz}
 
 
 \renewcommand{\thefigure}{\theenumi}
@@ -96,7 +97,40 @@
 \item The input signal $V_{in}$ shown in the figure $\ref{fig:4}$ is a 1 kHz square wave voltage that alternates between $+7V$ and $-7V$ with a 50\% duty cycle. Both transistors have the same current gain, which is large. The circuit delivers power to the load resistor $R_L$. What is the efficiency of this circuit for the given input? Choose the closest answer.
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\linewidth]{figs/4.png}
+    \resizebox{0.8\textwidth}{!}{%
+        \begin{circuitikz}
+            % Set font size smaller using \scriptsize or another size as needed
+            \tikzstyle{every node}=[font=\scriptsize]
+
+            \draw (10,15.5) to[short] (12,15.5);
+            \draw (10,14) to[short] (10,15.5);
+            \draw (10,14) to[short] (10,12.25);
+            \draw (10,12.25) to[short] (12,12.25);
+            \draw (12,16.25) to[short] (12,14.75);
+            \draw (12,13) to[short] (12,11.5);
+            \draw (8,13.75) to[short] (10,13.75);
+            \draw (12,12.25) to[short] (12.75,11.5);
+            \draw (12,15.5) to[short] (12.75,16.25);
+            \draw (12.75,18) to[short] (12.75,16.25);
+            \draw (12.75,11.5) to[short] (12.75,9.75);
+            \draw (12.75,14.75) to[short] (12.75,12.75);
+            \draw [->, >=Stealth] (12,15.25) .. controls (12.5,15) and (12.5,15) .. (12.75,14.75);
+            \draw [->, >=Stealth] (12.75,12.75) -- (12,12.25);
+            \draw (12.75,13.75) to[short] (14.75,13.75);
+            \draw (14.75,13.75) to[R] (14.75,11.75);
+            \draw (14,11.75) to[short] (15.5,11.75);
+            \draw (14.25,11.5) to[short] (15.25,11.5);
+            \draw (14.5,11.25) to[short] (15,11.25);
+            \draw (14.75,11) to[short] (15,11);
+            \draw (12.75,18.25) circle (0.25cm);
+            \draw (12.75,9.5) circle (0.25cm);
+            \draw (7.75,13.75) circle (0.25cm);
+            \node [font=\scriptsize] at (7,13.75) {$V_{in}$};
+            \node [font=\scriptsize] at (12.75,19) {+ 10 V};
+            \node [font=\scriptsize] at (12.5,8.75) {- 10 V};
+            \node [font=\scriptsize] at (16.5,12.75) {$R_{L} = 10 \Omega$};
+        \end{circuitikz}
+    }
     \caption{}
     \label{fig:4}
 \end{figure}
@@ -110,12 +144,62 @@
 \end{multicols}
 \bigskip
 \item $A$, $B$, $C$, and $D$ are input bits, and $Y$ is the output bit in the XOR gate circuit of the figure below $\ref{fig:5}$. Which of the following statements about the sum $S$ of $A$, $B$, $C$, $D$, and $Y$ is correct?
+
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\linewidth]{figs/5.png}
+    \resizebox{0.8\textwidth}{!}{% Adjust the scaling factor to fit your needs
+        \begin{circuitikz}
+            \tikzstyle{every node}=[font=\normalsize]
+
+            % First XOR Gate
+            \draw (10,19.25) to[short] (10.25,19.25);
+            \draw (10,18.75) to[short] (10.25,18.75);
+            \draw (10.25,19.25) node[ieeestd xor port, anchor=in 1, scale=0.89](xor1){} 
+                  (xor1.out) to[short] (12,19);
+            
+            % Second XOR Gate
+            \draw (10,17.25) to[short] (10.25,17.25);
+            \draw (10,16.75) to[short] (10.25,16.75);
+            \draw (10.25,17.25) node[ieeestd xor port, anchor=in 1, scale=0.89](xor2){} 
+                  (xor2.out) to[short] (12,17);
+            
+            % Third XOR Gate
+            \draw (14.75,18.25) to[short] (15,18.25);
+            \draw (14.75,17.75) to[short] (15,17.75);
+            \draw (15,18.25) node[ieeestd xor port, anchor=in 1, scale=0.89](xor3){} 
+                  (xor3.out) to[short] (16.75,18);
+            
+            % Connections for inputs
+            \draw (8.25,19.25) to[short] (10.25,19.25);
+            \draw (8.25,18.75) to[short] (10.25,18.75);
+            \draw (8.25,17.25) to[short] (10.25,17.25);
+            \draw (8.25,16.75) to[short] (10.25,16.75);
+            
+            % Inter-gate connections
+            \draw (13.25,18.25) to[short] (15.25,18.25);
+            \draw (13.25,17.75) to[short] (15.25,17.75);
+            \draw (16.75,18) to[short] (18.75,18);
+            \draw (11.75,19) to[short] (13.25,19);
+            \draw (11.75,17) to[short] (13.25,17);
+            \draw (13.25,19) to[short] (13.25,18.25);
+            \draw (13.25,17) to[short] (13.25,17.75);
+            
+            % Labels
+            \node [font=\LARGE] at (7.75,19.5) {A};
+            \node [font=\LARGE] at (7.75,18.75) {B};
+            \node [font=\LARGE] at (7.75,17.25) {C};
+            \node [font=\LARGE] at (7.75,16.5) {D};
+            \node [font=\LARGE] at (19.25,18) {Y};
+            \node [font=\normalsize] at (11,17) {XOR};
+            \node [font=\normalsize] at (15.75,18) {XOR};
+            \node [font=\normalsize] at (11,19) {XOR};
+        \end{circuitikz}
+    }
     \caption{}
     \label{fig:5}
 \end{figure}
+
+
 \begin{enumerate}
     \item $S$ is always either zero or odd
     \item $S$ is always either zero or even
@@ -134,12 +218,46 @@
     \end{multicols}
     \bigskip
     \item The switch $S$ in the circuit of the figure $\ref{fig:7}$ is initially closed. It is opened at time $t = 0$. You may neglect the Zener diode forward voltage drops. What is the behaviour of $V_{out}$ for $t > 0$?
-    \begin{figure}[!ht]
-    \centering
-    \includegraphics[width=7cm]{figs/7.png}
-    \caption{}
-    \label{fig:7}
-    \end{figure}
+    \begin{figure}[H]
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw (7,10) to[short, -o] (7,9.25) node[right] {-10V};
+\draw (7.25,10.5) node[op amp,scale=1] (opamp2) {};
+\draw (opamp2.+) to[short] (5.75,10);
+\draw  (opamp2.-) to[short] (5.75,11);
+\draw (8.45,10.5) to[short](8.75,10.5);
+\draw (5,11) to[short] (6.25,11);
+\draw (5,10.5) to[short] (5,11);
+\draw (4.5,10.5) to[short] (5,10.5);
+\draw (4.5,10.5) to[R,l={\small $1k\Omega$}] (4.5,11.75);
+\draw (4.5,11.75) to[short, -o] (4.5,12.25) node[left] {+10V};
+\draw (5.75,8.25) to[short] (8,8.25);
+\draw (5.75,8.25) to[short] (5.75,10);
+\draw (8,9.25) to[short] (10,9.25);
+\draw (8,8.25) to[short] (8,9.25);
+\draw (8.5,10.5) to[R] (10,10.5);
+\draw (10,9.25) to[R,l={\small $100k\Omega$}] (10,8);
+\draw (10,8) to (10,7.75) node[ground]{};
+\draw (10,10.5) to[short, -o] (13,10.5) node[right] {$V_{OUT}$};
+\draw (10,10.5) to[R,l={\small $10k\Omega$}] (10,9.25);
+\draw (2.25,8.25) to[short] (2,8.25);
+\draw (12,9) to[empty Schottky diode,l={\small 5.0V}] (12,7.5);
+\draw (12,10.5) to[empty Schottky diode,l={\small 5.0V}] (12,9);
+\draw (12,7.5) to (12,7.25) node[ground]{};
+\draw (7,11) to[short, -o] (7,12) node[left] {+10V};
+\draw (4.5,10.5) to[C,l={\footnotesize $0.01\mu F$}] (4.5,9);
+\draw (4.5,9) to[short, -o] (4.5,7.25) node[right] {-10V};
+\draw (2.5,8.5) to[normal open switch,l={\small S}] (2.5,10.5);
+\draw (2.5,10.5) to[short] (4.5,10.5);
+\draw (2.5,8.5) to[short] (4.5,8.5);
+\end{circuitikz}
+}%
+\caption{}
+\label{fig:7}
+\end{figure}
+
     \begin{enumerate}
         \item It makes a transition from -5 V to +5 V at $t = 12.98 \, \mu s$
         \item It makes a transition from -5 V to +5 V at $t = 2.57 \, \mu s$
@@ -220,12 +338,55 @@
     \bigskip
     \item 
 Consider a synchronous generator connected to an infinite bus by two identical parallel transmission lines. The transient reactance $x'$ of the generator is $0.1 \, \text{pu}$ and the mechanical power input to it is constant at $1.0 \, \text{pu}$. Due to some previous disturbance, the rotor angle ($\delta$) is undergoing an undamped oscillation, with the maximum value of $\delta(t)$ equal to $130^\circ$. One of the parallel lines trips due to relay maloperation at an instant when $\delta(t) = 130^\circ$ as shown in the figure $\ref{fig:13}$. The maximum value of the per unit line reactance, $x$, such that the system does not lose synchronism subsequent to this tripping is
-    \begin{figure}[!ht]
+
+\vfill
+\begin{figure}[!ht]
+    \centering
+    \resizebox{0.8\textwidth}{!}{% Adjust the scaling factor to fit your needs
+        \begin{circuitikz}
+            \tikzstyle{every node}=[font=\normalsize]
+
+            % Drawing sinusoidal voltage source
+            \draw (6,17.5) to[sinusoidal voltage source, sources/symbol/rotate=auto] (7.75,17.5);
+            
+            % Resistor connections
+            \draw (7.25,17.5) to[R] (9.25,17.5);
+            
+            % Vertical connections for the resistors
+            \draw (9.25,18.75) to[short] (9.25,16.25);
+            \draw (9.25,18) to[R] (11.25,18);
+            \draw (9.25,17) to[R] (11.25,17);
+            \draw (11.25,19) to[short] (11.25,16.25);
+            
+            % Diagonal connections and crossing wires
+            \draw (11.25,18.25) to[short] (11.5,18.5);
+            \draw (11.25,18.5) to[short] (11.75,19);
+            \draw (11.25,18) to[short] (11.75,18.5);
+            \draw (11.25,17.5) to[short] (11.75,18);
+            \draw (11.25,17) to[short] (11.75,17.5);
+            \draw (11.25,16.5) to[short] (11.75,17);
+
+            % Adding text labels
+            \node at (10.25,18.5) {$x$};
+            \node at (10.25,16.5) {$x$};
+            \node at (8,18.25) {$x^{1} = 0.1\ \text{pu}$};
+            \node at (18.75,23.25) {1.0};
+            \node at (6.75,16.75) {1.0$\angle \delta$}; % Using LaTeX math mode for the angle symbol
+            \node at (11.25,19.5) {1.0$\angle$0};
+
+        \end{circuitikz}
+    }
+    \caption{}
+    \label{fig:my_label}
+\end{figure}
+\vfill % Pushes the rest of the content below to vertically center the figure
+
+\begin{figure}[!ht]
     \centering
     \includegraphics[width=\linewidth]{figs/13.png}
     \caption{}
     \label{fig:13}
-    \end{figure}
+\end{figure}
 \begin{multicols}{4}
 \begin{enumerate}
     \item $0.87$
@@ -248,7 +409,7 @@ Consider a synchronous generator connected to an infinite bus by two identical p
         \item $ Z = \frac{k^2}{3} \begin{bmatrix} 1.0 & -0.5 & -0.5 \\ -0.5 & 1.0 & -0.5 \\ -0.5 & -0.5 & 1.0 \end{bmatrix} $
     \end{enumerate}
     \end{multicols}
-    \newpage
+\bigskip
     \item Consider the two power systems shown in figure $\ref{fig:15}$, which are initially not interconnected, and are operating in steady state at the same frequency. Separate loadflow solutions are computed individually for the two systems, corresponding to this scenario. The bus voltage phasors so obtained are indicated on figure A. These two isolated systems are now interconnected by a short transmission line as shown in figure B, and it is found that $P_1 = P_2 = Q_1 = Q_2 = 0$.
     \begin{figure}[!ht]
     \centering
