@@ -1,0 +1,248 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{circuitikz}
+
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{GATE 2013 XE(4-5)}
+\author{EE24BTECH11030 - J.KEDARANANDA}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+    
+    \item Consider the function \( f(z) = z^2 \overline{z} \), \( z \in \mathbb{C} \). At \( z = 0 \), the function \( f \)
+    \begin{enumerate}
+        \item does not satisfy the Cauchy-Riemann equations
+        \item satisfies the Cauchy-Riemann equations but is not differentiable
+        \item is differentiable but not analytic
+        \item is analytic
+    \end{enumerate}
+    \bigskip
+    \item The integral \( \oint_C \frac{(z+4)}{(z+1)(z-2)^3} \, dz \) along the contour \( C : |z - (1 + i)| = 2 \), oriented anti-clockwise, is equal to
+    \begin{multicols}{4}
+    \begin{enumerate}
+        \item 0
+        \item \( \frac{2 \pi i}{9} \)
+        \item \( -\frac{2 \pi i}{9} \)
+        \item \( \frac{4 \pi i}{9} \)
+    \end{enumerate}
+    \end{multicols}
+\bigskip
+    \item The integral \( \int_0^1 \int_{x}^{x^2} \left( \frac{x}{y} \right) e^{-x^2/y} \, dy \, dx \) equals
+    \begin{multicols}{4}
+    \begin{enumerate}
+        \item \( \frac{e - 2}{e} \)
+        \item \( \frac{e - 1}{2e} \)
+        \item \( \frac{e - 1}{2} \)
+        \item \( \frac{e - 2}{2e} \)
+    \end{enumerate}
+    \end{multicols}
+\bigskip
+    \item If the mean and variance of a binomial distribution are 6 and 2 respectively, then the probability of two failures is
+    \begin{multicols}{4}
+    \begin{enumerate}
+        \item \( 4 \left( \frac{2}{3} \right)^7 \)
+        \item \( 4 \left( \frac{22}{37} \right) \)
+        \item \( 17 \left( \frac{2}{3} \right)^7 \)
+        \item \( 17 \left( \frac{22}{37} \right) \)
+    \end{enumerate}
+    \end{multicols}
+\bigskip
+    \item For the matrix \( M = \begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & -1 \\ 1 & 1 & -2 \end{pmatrix} \), consider the following statements:
+    
+    \begin{itemize}
+        \item[(P)] The characteristic equation of \( M \) is \( \lambda^3 - \lambda = 0 \).
+        \item[(Q)] \( M^{-1} \) does not exist.
+        \item[(R)] The matrix \( M \) is diagonalizable.
+    \end{itemize}
+
+    Which of the above statements are true?
+    \begin{multicols}{2}
+    \begin{enumerate}
+        \item P, Q and R
+        \item P and R but not Q
+        \item P and Q but not R
+        \item Q and R but not P
+    \end{enumerate}
+    \end{multicols}
+\bigskip
+    \item The work done by the force \( \vec{F} = (x + x^2) \, \hat{i} + (x^2 + y^3) \, \hat{j} \) in moving a particle once along the triangle with vertices \( (0,0), (1,0) \) and \( (0,1) \) in the anti-clockwise direction is
+    \begin{multicols}{4}
+    \begin{enumerate}
+        \item 0
+        \item \( \frac{1}{6} \)
+        \item \( \frac{1}{3} \)
+        \item \( \frac{5}{3} \)
+    \end{enumerate}
+    \end{multicols} 
+\bigskip   
+    \item The general solution of the differential equation
+    \[
+    x^3 \frac{d^3 y}{dx^3} + x^2 \frac{d^2 y}{dx^2} + x \frac{dy}{dx} - y = 0, \quad x > 0
+    \]
+    is
+    \begin{enumerate}
+        \item \( C_1 e^x + e^{x/2} \left\{ C_2 \cos\left( \frac{\sqrt{3}}{2} x \right) + C_3 \sin\left( \frac{\sqrt{3}}{2} x \right) \right\} \)
+        \item \( C_1 x + x^{-1/2} \left\{ C_2 \cos\left( \frac{\sqrt{3}}{2} \log_e x \right) + C_3 \sin\left( \frac{\sqrt{3}}{2} \log_e x \right) \right\} \)
+        \item \( C_1 e^x + e^{-x/2} \left\{ C_2 \cos\left( \frac{\sqrt{3}}{2} x \right) + C_3 \sin\left( \frac{\sqrt{3}}{2} x \right) \right\} \)
+        \item \( C_1 x + x^{1/2} \left\{ C_2 \cos\left( \frac{\sqrt{3}}{2} \log_e x \right) + C_3 \sin\left( \frac{\sqrt{3}}{2} \log_e x \right) \right\} \)
+    \end{enumerate}
+\bigskip
+    \item Using Euler's method to solve the differential equation
+    \[
+    \frac{dy}{dx} = 2 \cos \left( \frac{4 \pi x}{3} \right) - y, \quad y(0) = 1
+    \]
+    with step-size \( h = 0.25 \), the value of \( y(0.5) \) is
+    \begin{multicols}{4}
+    \begin{enumerate}
+        \item 1.3125
+        \item 1.1875
+        \item 1.125
+        \item 1.0625
+    \end{enumerate}
+    \end{multicols}
+\bigskip    
+    \item The gauge pressure inside a soap bubble of radius $R$, with $\sigma$ denoting the surface tension between the soap solution and air, is:
+    \begin{multicols}{4}
+    \begin{enumerate}
+        \item $\frac{\sigma}{2 \pi R}$
+        \item $\frac{4 \sigma}{R}$
+        \item $\frac{2 \sigma}{R}$
+        \item $\frac{\sigma}{4 \pi R}$
+    \end{enumerate}
+    \end{multicols}
+\bigskip
+    \item Let $M$, $B$, and $G$ represent respectively the metacentre, centre of buoyancy, and the centre of mass of a floating buoy. Which of the following statements is correct?
+    \begin{multicols}{2}
+    \begin{enumerate}
+        \item $M$ is above $G$; Buoy unstable
+        \item $B$ is above $G$; Buoy stable
+        \item $M$ is above $G$; Buoy stable
+        \item $B$ is above $G$; Buoy unstable
+    \end{enumerate}
+    \end{multicols}
+\bigskip
+    \item A reservoir connected to a pipeline is being filled with water, as shown in the Figure. At any time $t$, the free surface level in the reservoir is $h$. Find the time in seconds for the reservoir to get filled up to a height of 1 m, if the initial level is 0.2 m.
+\begin{figure}[!ht]
+    \centering
+    \resizebox{1\textwidth}{!}{%
+        \begin{circuitikz}
+            % Set font size for all nodes
+            \tikzstyle{every node}=[font=\large]
+
+            % Drawing circuit elements
+            \draw (9.25,18.75) to[short] (9.25,18.75); % Starting point (possibly not necessary)
+            \draw (10.5,18.25) to[short] (10.5,15.5);  % Vertical line on left
+            \draw (14.5,18.25) to[short] (14.5,15.5);  % Vertical line on right
+            \draw (13,15.5) to[short] (14.5,15.5);     % Horizontal line connecting right section
+            \draw (10.5,15.5) to[short] (12,15.5);     % Horizontal line from left to center
+            \draw (12,15.5) to[short] (12,14.5);       % Vertical line down
+            \draw (13,15.5) to[short] (13,14.5);       % Parallel vertical line down on right
+            \draw (10,14.5) to[short] (12,14.5);       % Horizontal line connecting to left vertical
+            \draw (13,14.5) to[short] (15,14.5);       % Horizontal line connecting to right vertical
+            \draw (10,13.75) to[short] (15,13.75);     % Bottom horizontal line
+
+            % Internal short connections
+            \draw (12.5,12.75) to[short] (13.5,12.75); % Short connection in bottom section
+            \draw (15.5,17) to[short] (17.5,17);       % Top connection on the right
+            \draw (24.25,22) to[short] (26.25,22);     % Possibly separate element on top right
+            \draw (10.5,17) to[short] (14.5,17);       % Top horizontal line connecting left and right
+            \draw (15.5,15.5) to[short] (17.5,15.5);   % Middle right connection
+
+            % Adding arrows
+            \draw [->, >=Stealth] (9.5,14) .. controls (10.5,14) and (10,14) .. (10.5,14); % Curved arrow left
+            \draw [->, >=Stealth] (13.5,12.75) -- (14,13.75);                              % Straight arrow upward
+            \draw [->, >=Stealth] (14.75,14) .. controls (14,14) and (15.25,14) .. (15.5,14); % Curved arrow right
+            \draw [->, >=Stealth] (16.5,16.5) .. controls (16.5,17) and (16.5,16.75) .. (16.5,17); % Curved arrow upward
+            \draw [->, >=Stealth] (16.5,16) -- (16.5,15.5);                                 % Straight arrow downward
+            \draw [->, >=Stealth] (12.5,14.5) -- (12.5,15.25);                              % Straight arrow upward in center
+
+            % Adding labels
+            \node [font=\LARGE] at (8.5,14) {2 m/s};                % Left label
+            \node [font=\LARGE] at (16.5,14) {1 m/s};               % Right label
+            \node [font=\large] at (16.5,16.25) {h};                % Label in middle right
+            \node [font=\large] at (11.25,12.75) {Dia = 0.1 m};     % Diameter label bottom
+            \node [font=\large] at (12.5,17.5) {Dia = 0.5 m};       % Diameter label top center
+        \end{circuitikz}
+    }%
+\end{figure}
+\newpage
+    \item Bernoulli's equation is valid for the following type of flow:
+    \begin{multicols}{2}
+    \begin{enumerate}
+        \item Compressible, steady, inviscid
+        \item Incompressible, steady, viscous
+        \item Compressible, unsteady, viscous
+        \item Incompressible, steady, inviscid
+    \end{enumerate}
+    \end{multicols}
+\bigskip
+    \item If $A$ is the area of a circle of radius $r$ enclosing a plane forced vortex flow, with origin at the centre of the vortex and if $\omega$ is the angular velocity, $\zeta$ is the vorticity, $\vec{V}$ is the velocity vector, then the circulation around the contour of the circle is given by
+    \begin{multicols}{4}
+    \begin{enumerate}
+        \item $2 \omega A$
+        \item $2 \zeta A$
+        \item $2 \vec{V} A$
+        \item 0
+    \end{enumerate}
+    \end{multicols}
+\end{enumerate}
+\end{document}
+
+
+
+
