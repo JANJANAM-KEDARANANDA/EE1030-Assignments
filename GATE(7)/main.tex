@@ -1,0 +1,186 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{circuitikz}
+
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{GATE 2016 XE(53-65)}
+\author{EE24BTECH11030 - J.KEDARANANDA}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+    \item In a diffraction experiment, monochromatic X-rays of wavelength $1.54 \, \text{\AA}$ are used to examine a material with a BCC structure. If the lattice parameter is $4.1 \, \text{\AA}$, the angular position $\theta$ of the first diffraction peak is \underline{\hspace{1cm}} degrees.
+    
+    \bigskip
+    
+    \item The yield strength of a ferritic steel increases from $120 \, \text{MPa}$ to $150 \, \text{MPa}$ when the grain size is decreased from $256 \, \mu\text{m}$ to $64 \, \mu\text{m}$. When the grain size is further reduced to $16 \, \mu\text{m}$, the expected yield strength is \underline{\hspace{1cm}} MPa.
+    
+    \bigskip
+
+    \item A direct bandgap semiconductor has a bandgap of $1.8 \, \text{eV}$. The threshold value of the wavelength {\textbf{BELOW}} which this material will absorb radiation is \underline{\hspace{1cm}} $\text{\AA}$.
+    
+    (Given: Planck's constant, $h = 6.626 \times 10^{-34} \, \text{J s}$, the charge of an electron, $e = 1.6 \times 10^{-19} \, \text{C}$, and speed of light, $c = 3 \times 10^8 \, \text{m s}^{-1}$)
+    
+    \bigskip
+
+    \item A half cell consisting of pure Ni immersed in an aqueous solution containing $\text{Ni}^{2+}$ ions of unknown concentration, is galvanically coupled with another half cell consisting of pure Cd immersed in a $1 \, \text{M}$ aqueous solution of $\text{Cd}^{2+}$ ions. The temperature is $25 \, ^\circ \text{C}$ and pressure is $1 \, \text{atm}$. The standard electrode reduction potentials of Ni and Cd are $-0.250 \, \text{V}$ and $-0.403 \, \text{V}$, respectively. The voltage of the cell is found to be zero. The concentration of $\text{Ni}^{2+}$ in the solution is \underline{\hspace{1cm}} $\times 10^{-6} \, \text{M}$.
+    
+    (Given: Universal gas constant, $R = 8.31 \, \text{J mol}^{-1} \text{K}^{-1}$, Faraday's constant, $F = 96500 \, \text{C mol}^{-1}$)
+    
+    \bigskip
+
+    \item Match the type of magnetism given in Group 1 with the material given in Group 2:
+    
+    \[
+    \begin{array}{|c|c|}
+    \hline
+    \text{Group 1} & \text{Group 2} \\
+    \hline
+    P: \text{Ferromagnetic} & 1: \text{Nickel oxide} \\
+    Q: \text{Ferrimagnetic} & 2: \text{Sodium} \\
+    R: \text{Antiferromagnetic} & 3: \text{Magnetite} \\
+    S: \text{Paramagnetic} & 4: \text{Cobalt} \\
+    \hline
+    \end{array}
+    \]
+    
+    \begin{enumerate}
+        \item $(A) \quad P: 4, \, Q: 3, \, R: 1, \, S: 2$
+        \item $(B) \quad P: 4, \, Q: 1, \, R: 3, \, S: 2$
+        \item $(C) \quad P: 1, \, Q: 2, \, R: 4, \, S: 3$
+        \item $(D) \quad P: 3, \, Q: 2, \, R: 1, \, S: 4$
+    \end{enumerate}
+    
+    \bigskip
+
+    \item Gallium is to be diffused into pure silicon wafer such that its concentration at a depth of $10^{-3} \, \text{cm}$ will be one half the surface concentration. Given that the diffusion coefficient $(D)$ of gallium in silicon at $1355 \, ^\circ \text{C}$ is $6 \times 10^{-11} \, \text{cm}^2 \, \text{s}^{-1}$, the time the silicon wafer should be heated in contact with gallium vapor at $1355 \, ^\circ \text{C}$ is \underline{\hspace{1cm}} s.
+    
+    (Given: $\text{erf}(0.5) \approx 0.5$)
+    \bigskip
+    \item A batch of spherical titania nanoparticles, uniform in size, has a specific surface area of $125 \, \text{m}^2 \, \text{g}^{-1}$. If the density of titania is $4.23 \, \text{g} \, \text{cm}^{-3}$, the diameter of the particles is \underline{\hspace{1cm}} nm.
+    
+    \bigskip
+
+    \item Given the probability distribution function
+    \[
+    f(x) = 
+    \begin{cases} 
+      0.25x & \text{for } 1 \leq x \leq 3 \\
+      0 & \text{otherwise}
+    \end{cases}
+    \]
+    The probability that the random variable $x$ takes a value between $1$ and $\sqrt{5}$ is \underline{\hspace{1cm}}.
+    
+    \bigskip
+
+    \item In the vulcanization of $50 \, \text{g}$ of natural rubber, $10 \, \text{g}$ of sulfur is added. Assuming the mer to S ratio is $1:1$, the maximum percentage of cross-linked sites that could be connected is \underline{\hspace{1cm}} \%. (Given: atomic weight of S is $32 \, \text{amu}$ and molecular weight of a mer of natural rubber is $68 \, \text{amu}$)
+    
+    \bigskip
+
+    \item Match the heat treatment process of steels given in Group 1 with the microstructural feature given in Group 2:
+    
+    \[
+    \begin{array}{|c|c|}
+    \hline
+    \text{Group 1} & \text{Group 2} \\
+    \hline
+    P: \text{Quenching} & 1: \text{Bainite} \\
+    Q: \text{Normalizing} & 2: \text{Martensite} \\
+    R: \text{Tempering} & 3: \text{Pearlite} \\
+    S: \text{Austempering} & 4: \text{Iron carbide precipitates} \\
+    & 5: \text{Intermetallic precipitates} \\
+    \hline
+    \end{array}
+    \]
+    
+    \begin{enumerate}
+        \item $(A) \quad P: 2, \, Q: 3, \, R: 4, \, S: 1$
+        \item $(B) \quad P: 3, \, Q: 4, \, R: 5, \, S: 1$
+        \item $(C) \quad P: 4, \, Q: 1, \, R: 5, \, S: 3$
+        \item $(D) \quad P: 2, \, Q: 5, \, R: 4, \, S: 3$
+    \end{enumerate}
+    
+    \bigskip
+
+    \item In the photoelectric effect, electrons are ejected
+    \begin{enumerate}
+        \item at all wavelengths, as long as the intensity of the incident radiation is above a threshold value.
+        \item at all wavelengths, as long as the intensity of the incident radiation is below a threshold value.
+        \item at all intensities, as long as the wavelength of the incident radiation is below a threshold value.
+        \item at all intensities, as long as the wavelength of the incident radiation is above a threshold value.
+    \end{enumerate}
+    
+    \bigskip
+
+    \item The angle between $[110]$ and $[111]$ directions in the cubic system is \underline{\hspace{1cm}} degrees.
+    \bigskip
+    \item A single degree of freedom vibrating system has mass of 5 kg, stiffness of 500 N/m and damping
+    coefficient of 100 N-s/m. To make the system critically damped 
+    \begin{enumerate}
+        \item only the mass is to be increased by 1.2 times. 
+        \item only the stiffness is to be reduced to half. 
+        \item only the damping coefficient is to be doubled. 
+        \item no change in any of the system parameters is required.
+    \end{enumerate}
+\end{enumerate}
+\end{document}
+
+
+
+
+
+
