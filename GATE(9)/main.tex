@@ -1,0 +1,189 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{circuitikz}
+
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{GATE 2019 MA(14-26)}
+\author{EE24BTECH11030 - J.KEDARANANDA}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+\item  Let
+\[
+u_n = \frac{n!}{1.3.5...(2n-1)}, \quad n \in \mathbb{N} \text{ (the set of all natural numbers)}.
+\]
+Then $\lim_{n \to \infty} u_n$ is equal to \underline{\hspace{2cm}}.
+
+\bigskip
+
+\item  If the differential equation
+\[
+\frac{dy}{dx} = \sqrt{x^2 + y^2}, \quad y(1) = 2
+\]
+is solved using Euler's method with step-size $h = 0.1$, then $y(1.2)$ is equal to \underline{\hspace{2cm}} (round off to 2 places of decimal).
+
+\bigskip
+
+\item  Let $f$ be any polynomial function of degree at most 2 over $\mathbb{R}$ (the set of all real numbers).\\
+If the constants $a$ and $b$ are such that
+\[
+\frac{df}{dx} = a \, f(x) + 2 \, f(x+1) + b \, f(x+2), \quad \text{for all } x \in \mathbb{R},
+\]
+then $4a + 3b$ is equal to \underline{\hspace{2cm}} (round off to 2 places of decimal).
+
+\bigskip
+
+\item  Let $L$ denote the value of the line integral
+\[
+\oint_C \left(3x - 4x^2y\right) dx + \left(4xy^2 + 2y\right) dy,
+\]
+where $C$, a circle of radius 2 with center at origin of the $xy$-plane, is traversed once in the anti-clockwise direction. Then $\frac{L}{\pi}$ is equal to \underline{\hspace{2cm}}.
+
+\bigskip
+
+\item  The temperature $T : \mathbb{R}^3 \setminus \{(0, 0, 0)\} \rightarrow \mathbb{R}$ at any point $P(x, y, z)$ is inversely proportional to the square of the distance of $P$ from the origin. If the value of the temperature $T$ at the point $R(0, 0, 1)$ is $\sqrt{3}$, then the rate of change of $T$ at the point $Q(1, 1, 2)$ in the direction of $\overrightarrow{QR}$ is equal to \underline{\hspace{2cm}} (round off to 2 places of decimal).
+
+\bigskip
+
+
+\item Let $f$ be a continuous function defined on $[0,2]$ such that $f(x) \geq 0$ for all $x \in [0,2]$. If the area bounded by $y = f(x), x = 0, y = 0$ and $x = b$ is $\sqrt{3 + b^2} - \sqrt{3}$, where $b \in (0,2]$, then $f(1)$ is equal to \underline{\hspace{1cm}} (round off to 1 place of decimal).
+\bigskip
+
+\item If the characteristic polynomial and minimal polynomial of a square matrix $A$ are $(\lambda - 1)(\lambda + 1)^4(\lambda - 2)^5$ and $(\lambda - 1)(\lambda + 1)(\lambda - 2)$, respectively, then the rank of the matrix $A + I$ is \underline{\hspace{1cm}}, where $I$ is the identity matrix of appropriate order.
+\bigskip
+
+\item Let $\omega$ be a primitive complex cube root of unity and $i = \sqrt{-1}$. Then the degree of the field extension $\mathbb{Q}\left(i, \sqrt{3}, \omega\right)$ over $\mathbb{Q}$ (the field of rational numbers) is \underline{\hspace{1cm}}.
+\bigskip
+
+\item Let
+\[
+\alpha = \int_C \frac{e^{i \pi z}}{2z^2 - 5z + 2} \, dz, \quad C : \cos t + i \sin t, \, 0 \leq t \leq 2\pi, \, i = \sqrt{-1}.
+\]
+Then the greatest integer less than or equal to $|\alpha|$ is \underline{\hspace{1cm}}.
+\bigskip
+
+\item Consider the system:
+\[
+\begin{cases}
+3x_1 + x_2 + 2x_3 - x_4 = a, \\
+x_1 + x_2 + x_3 - 2x_4 = 3, \\
+x_1, x_2, x_3, x_4 \geq 0.
+\end{cases}
+\]
+If $x_1 = 1, x_2 = b, x_3 = 0, x_4 = c$ is a basic feasible solution of the above system (where $a, b,$ and $c$ are real constants), then $a + b + c$ is equal to \underline{\hspace{1cm}}.
+\bigskip
+
+\item Let $f : \mathbb{C} \to \mathbb{C}$ be a function defined by $f(z) = z^6 - 5z^4 + 10$. Then the number of zeros of $f$ in $\{z \in \mathbb{C} : |z| < 2\}$ is \underline{\hspace{1cm}}. \\
+($\mathbb{C}$ is the set of all complex numbers)
+\bigskip
+
+\item Let
+\[
+\ell^2 = \{ x = (x_1, x_2, \dots) : x_i \in \mathbb{C}, \sum_{i=1}^{\infty} |x_i|^2 < \infty \}
+\]
+be a normed linear space with the norm
+\[
+\| x \|_2 = \left( \sum_{i=1}^{\infty} |x_i|^2 \right)^{\frac{1}{2}}.
+\]
+Let $g : \ell^2 \to \mathbb{C}$ be the bounded linear functional defined by
+\[
+g(x) = \sum_{n=1}^{\infty} \frac{x_n}{3^n} \quad \text{for all } x = (x_1, x_2, \dots) \in \ell^2.
+\]
+Then
+\[
+\left( \sup \{ |g(x)| : \| x \|_2 \leq 1 \} \right)^2
+\]
+is equal to \underline{\hspace{1cm}} (round off to 3 places of decimal). \\
+($\mathbb{C}$ is the set of all complex numbers)
+\bigskip
+
+\item For the linear programming problem (LPP):
+\[
+\text{Maximize } Z = 2x_1 + 4x_2
+\]
+subject to
+\[
+\begin{cases}
+-x_1 + 2x_2 \leq 4, \\
+3x_1 + \beta x_2 \leq 6, \\
+x_1, x_2 \geq 0, \quad \beta \in \mathbb{R},
+\end{cases}
+\]
+($\mathbb{R}$ is the set of all real numbers)
+
+consider the following statements:
+\begin{enumerate}
+    \item[I.] The LPP always has a finite optimal value for any $\beta \geq 0$.
+    \item[II.] The dual of the LPP may be infeasible for some $\beta \geq 0$.
+    \item[III.] If for some $\beta$, the point $(1,2)$ is feasible to the dual of the LPP, then $Z \leq 16$, for any feasible solution $(x_1, x_2)$ of the LPP.
+    \item[IV.] If for some $\beta$, $x_1$ and $x_2$ are the basic variables in the optimal table of the LPP with $x_1 = \frac{1}{2}$, then the optimal value of dual of the LPP is 10.
+\end{enumerate}
+
+Then which of the above statements are TRUE?
+
+\begin{enumerate}
+    \item (A) I and III only
+    \item (B) I, III and IV only
+    \item (C) III and IV only
+    \item (D) II and IV only
+\end{enumerate}
+\bigskip
+
+\end{enumerate}
+\end{document}
+
