@@ -1,0 +1,179 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+\usepackage{colortbl}
+\usepackage{hyperref} % Added to fix \href
+\geometry{a4paper, margin=1in}
+
+% Page Style Settings
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textbf{Eigenvalue Analysis}}
+\rhead{\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{blue}\leaders\hrule height \headrulewidth\hfill}}
+
+% Set the headheight to avoid warnings
+\setlength{\headheight}{24.64995pt}
+
+% Colors
+\definecolor{headercolor}{HTML}{0056B3}
+\definecolor{subheadercolor}{HTML}{007ACC}
+\definecolor{tableheadercolor}{HTML}{D9E1F2}
+\definecolor{tablebordercolor}{HTML}{4F81BD}
+
+% Title Formatting
+\title{\textbf{\Huge \textcolor{headercolor}{Eigenvalue and Eigenvector Calculation: \\ Algorithms and Analysis}}}
+\author{J.KEDARANANDA\\\\EE24BTECH11030}
+
+\begin{document}
+
+\maketitle
+
+% Introduction Section
+\section*{\textcolor{headercolor}{Introduction}}
+\tcolorbox[colback=tableheadercolor!10, colframe=tablebordercolor, sharp corners=all, title=\textbf{Overview}]
+Eigenvalues and eigenvectors are fundamental concepts in linear algebra, widely used in fields such as machine learning, quantum mechanics, and control systems. For a square matrix \( A \), an eigenvalue \( \lambda \) and its corresponding eigenvector \( v \) satisfy the equation:
+\endtcolorbox
+
+\begin{equation}
+    A \cdot v = \lambda \cdot v
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item \( A \) is an \( n \times n \) matrix.
+    \item \( v \) is a non-zero vector (eigenvector).
+    \item \( \lambda \) is a scalar (eigenvalue).
+\end{itemize}
+
+Eigenvalues represent scaling factors for eigenvectors, which point in invariant directions under the linear transformation represented by \( A \).
+
+% Algorithms Section
+\section*{\textcolor{headercolor}{Algorithms for Eigenvalue Calculation}}
+Various algorithms exist to compute eigenvalues and eigenvectors. This section explores some widely used methods.
+
+\subsection*{\textcolor{subheadercolor}{1. Power Iteration}}
+\tcolorbox[colback=tableheadercolor!10, colframe=tablebordercolor, sharp corners=all, title=\textbf{Method}]
+This iterative algorithm computes the dominant eigenvalue (largest by magnitude) and its corresponding eigenvector. Starting with an arbitrary vector \( x \), the method repeatedly multiplies \( A \cdot x \) and normalizes the result.
+\endtcolorbox
+
+\textbf{Pros:}
+\begin{itemize}
+    \item Simple to implement.
+    \item Computationally efficient for large, sparse matrices.
+    \item Requires minimal memory.
+\end{itemize}
+
+\textbf{Cons:}
+\begin{itemize}
+    \item Only computes the dominant eigenvalue.
+    \item Convergence can be slow.
+    \item Limited ability to handle complex eigenvalues or non-dominant eigenvalues.
+\end{itemize}
+
+\textbf{Time Complexity:} \( O(n^2) \) per iteration for an \( n \times n \) matrix.
+
+\subsection*{\textcolor{subheadercolor}{2. QR Algorithm}}
+\tcolorbox[colback=tableheadercolor!10, colframe=tablebordercolor, sharp corners=all, title=\textbf{Method}]
+This algorithm iteratively decomposes \( A = QR \) (where \( Q \) is orthogonal and \( R \) is upper triangular) and updates \( A \leftarrow R \cdot Q \). The process converges to a triangular matrix, with eigenvalues on its diagonal.
+\endtcolorbox
+
+\textbf{Pros:}
+\begin{itemize}
+    \item General-purpose algorithm, works for any square matrix.
+    \item Finds all eigenvalues (real and complex).
+\end{itemize}
+
+\textbf{Cons:}
+\begin{itemize}
+    \item Computationally expensive for large matrices.
+    \item Requires more memory compared to iterative methods.
+\end{itemize}
+
+\textbf{Time Complexity:} \( O(n^3) \) for dense matrices.
+
+\subsection*{\textcolor{subheadercolor}{3. Jacobi Method}}
+\tcolorbox[colback=tableheadercolor!10, colframe=tablebordercolor, sharp corners=all, title=\textbf{Method}]
+Designed for symmetric matrices, this algorithm zeroes out off-diagonal elements iteratively using Givens rotations. It converges to a diagonal matrix with eigenvalues on the diagonal.
+\endtcolorbox
+
+\textbf{Pros:}
+\begin{itemize}
+    \item Very accurate for symmetric matrices.
+    \item Simple to parallelize.
+\end{itemize}
+
+\textbf{Cons:}
+\begin{itemize}
+    \item Only suitable for symmetric matrices.
+    \item Computationally intensive for large matrices.
+\end{itemize}
+
+\textbf{Time Complexity:} \( O(n^3) \) for dense matrices.
+
+\subsection*{\textcolor{subheadercolor}{4. Schur Decomposition}}
+\tcolorbox[colback=tableheadercolor!10, colframe=tablebordercolor, sharp corners=all, title=\textbf{Method}]
+The Schur decomposition decomposes a matrix \( A \) as \( A = Q \cdot T \cdot Q^\ast \), where \( Q \) is a unitary matrix and \( T \) is an upper triangular matrix. The eigenvalues of \( A \) are found on the diagonal of \( T \).
+\endtcolorbox
+
+\textbf{Pros:}
+\begin{itemize}
+    \item Handles both real and complex eigenvalues efficiently.
+    \item Suitable for all types of square matrices.
+    \item Numerically stable and reliable.
+\end{itemize}
+
+\textbf{Cons:}
+\begin{itemize}
+    \item Computationally expensive for very large matrices.
+    \item Requires advanced linear algebra operations.
+\end{itemize}
+
+\textbf{Time Complexity:} \( O(n^3) \) for dense matrices.
+
+% Comparison Table
+\section*{\textcolor{headercolor}{Comparison of Algorithms}}
+\begin{tabular}{|p{3.5cm}|p{3cm}|p{3cm}|p{4cm}|}
+\hline
+\rowcolor{tableheadercolor}
+\textbf{Algorithm} & \textbf{Time Complexity} & \textbf{Accuracy} & \textbf{Suitability} \\ \hline
+Power Iteration & \( O(n^2) \) & Moderate & Large, sparse matrices \\ \hline
+QR Algorithm & \( O(n^3) \) & High & General-purpose \\ \hline
+Jacobi Method & \( O(n^3) \) & High & Symmetric matrices \\ \hline
+Schur Decomposition & \( O(n^3) \) & High & General-purpose, complex inputs \\ \hline
+\end{tabular}
+
+% Conclusion Section
+\section*{\color{blue}Conclusion}
+After a comprehensive analysis of various eigenvalue computation algorithms, the \textbf{Schur Decomposition} stands out as the most suitable method for this assignment. This choice is driven by its unique combination of numerical stability, accuracy, and versatility.
+
+\begin{tcolorbox}[colback=lightgray!10, colframe=teal, title=Key Advantages]
+\begin{enumerate}
+    \item \textbf{Robust for All Matrix Types:} The Schur Decomposition handles all types of square matrices, including symmetric, non-symmetric, sparse, and dense matrices. Its ability to process matrices with complex entries and compute complex eigenvalues reliably sets it apart from alternatives.
+    \item \textbf{Accuracy and Stability:} By leveraging unitary transformations, the algorithm minimizes numerical errors, ensuring stable results for both real and complex eigenvalues.
+    \item \textbf{Generality:} Unlike methods such as the Power Iteration, which focus only on dominant eigenvalues, or the Jacobi Method, which is limited to symmetric matrices, the Schur Decomposition provides all eigenvalues and eigenvectors effectively. This makes it a general-purpose solution.
+\end{enumerate}
+\end{tcolorbox}
+
+\textbf{Overall Suitability:} The Schur Decomposition's ability to accommodate all square matrices, handle both real and complex eigenvalues, and maintain numerical stability underlines its superiority. As modern applications often involve matrices with diverse properties, this algorithm is particularly advantageous for scenarios requiring broad applicability and precision.
+
+\subsection*{Why Choose Python?}
+Python is widely recognized as one of the most accessible and versatile programming languages for computational algorithms, thanks to its extensive libraries, simplicity, and community support. For eigenvalue computation and similar tasks, Python provides unmatched flexibility and rapid prototyping capabilities.
+
+
+% References Section
+\section*{\textcolor{headercolor}{References}}
+\begin{itemize}
+    \item \href{https://youtu.be/d32WV1rKoVk?si=IUbFBid_FIf8_Jty}{QR Algorithm Explanation (YouTube)}
+    \item \href{https://youtu.be/ItYveKoaBF8}{Schur Decomposition (YouTube)}
+    \item \href{https://youtu.be/0MtwqhIwdrI}{Gram-Schmidt Orthogonalization (YouTube)}
+    \item \href{https://youtu.be/mJNM4EYB-9s}{Schur Decomposition Overview  (YouTube)}
+\end{itemize}
+
+\end{document}
+
